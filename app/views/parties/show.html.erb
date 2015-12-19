@@ -3,11 +3,38 @@
     <div class="modal-content">
       <div class="modal-header">
         <h1 class= "text-center" style="margin:30px;">
-          Summary of your house party
+          Summary of <%=@party.name%>
         </h1>
-        <h6 class= "text-center" style="margin:20px;"> Laissez-nous votre mail, vous serez prévenus dès que des shoppers sont disponibles dans votre quartier.</h6>
         <center>
-          <input id="" name="" type="text" placeholder="email" class="form-control input-md" style="margin:10px;">
+        <p class= "text-center" style="margin:20px;">
+          <strong>
+        </p>
+        <h3>Your thema:</h3>
+        <h4><%=@party.thema%></h4>
+        <h3>Your description:</h3>
+        <h4><%=@party.description%></h4>
+        <br>
+        <h3>Your minimum guest:</h3>
+        <h4><%=@party.guest_min%></h4>
+        <br>
+        <h3>Your maximum guest:</h3>
+        <h4><%=@party.guest_max%></h4>
+        <br>
+        <h3>Your price to provide:</h3>
+        <h4><%=@party.price_per_person%></h4>
+        <br>
+        <h3>Your date:</h3>
+        <h4><%=@party.date%></h4>
+        <br>
+        <h3>Your starting hour:</h3>
+        <h4><%=@party.starting_hour%></h4>
+        <br>
+        <h3>Your ending hour:</h3>
+        <h4><%=@party.ending_hour%></h4>
+        <br>
+        <h3>Your address:</h3>
+        <h4><%=@party.city%>,<%=@party.street%> n°<%=@party.number%></h4>
+        <br>
         </center>
       </div>
     </div>

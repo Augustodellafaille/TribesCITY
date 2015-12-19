@@ -5,6 +5,7 @@ class PartiesController < ApplicationController
   end
 
   def show
+     @party = Party.find(params[:id])
   end
 
   def new
@@ -50,9 +51,11 @@ class PartiesController < ApplicationController
   end
 
 private
- # def set_party
- #      @party = Party.find(params[:id])
- #    end
+
+  # def set_party
+  #   @party = Party.find_by_id
+  # end
+
   def party_params
      params.require(:party).permit(:name, :thema, :description, :accepted, :guest_min, :guest_max, :price_per_person, :date, :starting_hour, :ending_hour, :city, :zip_code, :street, :number)
   end
