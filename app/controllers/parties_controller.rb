@@ -5,7 +5,7 @@ class PartiesController < ApplicationController
   end
 
   def show
-     @party = Party.find(params[:id])
+    @party = Party.find(params[:id])
   end
 
   def new
@@ -28,9 +28,11 @@ class PartiesController < ApplicationController
   end
 
   def edit
+    @party = Party.find(params[:id])
   end
 
   def update
+    @party = Party.find(params[:id])
     respond_to do |format|
       if @party.update(party_params)
         format.html { redirect_to @party, notice: 'The home-party was successfully updated but it need to be approved.' }

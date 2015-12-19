@@ -1,2 +1,33 @@
 <h1>Parties#index</h1>
 <p>Find me in app/views/parties/index.html.erb</p>
+
+  <% @parties.each do |party| %>
+    <div class="container">
+      <div class="row">
+       <div class="col-sm-4 col-md-3 col-xs-4 col-lg-4" >
+      <section id="t-cards">
+                      <div class="panel panel-default panel-card" style="width: 314px;">
+                          <div class="panel-heading">
+                              <img src="https://unsplash.imgix.net/12/barley.jpg?q=75&fm=jpg&s=f39de5ca1970a13dbe6af6c86b3c47ec" style="width: 250px;" />
+                              <button class="btn btn-primary btn-sm" role="button">participate</button>
+                          </div>
+                          <div class="panel-figure">
+                              <img class="img-responsive img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/73.jpg" />
+                          </div>
+                          <div class="panel-body text-center">
+                              <h4 class="panel-header"><a href="https://twitter.com/maridlcrmn"><%=party.name%></a></h4>
+                              <small><%= party.description%></small>
+                              <br>
+                              <small><%=party.date%></small>
+                              <br>
+                              <small>from <%=party.starting_hour%> to <%=party.ending_hour%></small>
+                          </div>
+                      </div>
+              </div>
+            </div>
+          </div>
+      </section>
+    </div>
+  </div>
+    </div>
+  <% end %>
