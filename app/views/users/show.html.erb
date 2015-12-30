@@ -1,2 +1,31 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container" style="padding-top: 150px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class= "text-center" style="margin:30px;">
+          About <%=@user.username%>
+        </h1>
+        <center>
+        <p class= "text-center" style="margin:20px;">
+          <strong>
+        </p>
+        <h3><%=@user.firstname%> <%=@user.lastname%></h3><p>from <%=@user.city%></p>
+        <br>
+        <h4>We can contact you by:</h4>
+        <div class= "text-left">
+        <h3>email:</h3><p><%=@user.email%></p>
+        <h3>phone:</h3><p><%=@user.phone_number%></p>
+        </div>
+        <h4>You live at:</h4>
+        <p><%=@user.street%> n°<%=@user.number%>,</p>
+        <p><%=@user.zip_code%> <%=@user.city%></p>
+        <br>
+        <br>
+        <%= link_to 'Edit', edit_user_path(current_user)%> |
+        <%= link_to 'Back', root_path %>
+
+        </center>
+      </div>
+    </div>
+  </div>
+</div>

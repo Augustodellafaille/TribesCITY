@@ -1,2 +1,102 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<%= simple_form_for @user do |f| %>
+
+ <div class="container">
+        <div class="modal-dialog edit-products">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">About Me </h4>
+                </div>
+                <div class="modal-body">
+                    <center>
+                      <h4 class="media-heading">
+                        <small>
+                          <%= f.input :username %>
+                          <%= f.input :firstname %>
+                          <%= f.input :lastname %>
+                        </small>
+                      </h4>
+                    </center>
+                    <div class="container">
+                      <span><strong>Party detail: </strong></span>
+                    </div>
+
+
+                                    <br>
+                                    <div class="field">
+                                    <br>
+                                      <%= f.input :thema %>
+                                    </div>
+                                    <br>
+                                    <div class="field">
+                                      <%= f.input :description %>
+                                    </div>
+                                    <br>
+                                    <div class="field">
+
+                                      <%= f.input :guest_min %>
+                                    </div>
+                                    <br>
+                                    <div class="field">
+
+                                      <%= f.input :guest_max %>
+                                    </div>
+                                    <br>
+                                    <div class="field">
+
+                                      <%= f.input :price_per_person %>
+                                    </div>
+                                    <br>
+                                     <div class="field">
+
+                                      <%= f.input :total_price %>
+                                    </div>
+                                    <br>
+                                    <div class="field">
+
+                                      <%= f.input :date %>
+                                    </div>
+                                    <br>
+                                    <div class="field">
+
+                                      <%= f.input :starting_hour, as: :time, input_html: { value: Time.now.strftime('%h-%m-%s'),  }%>
+                                    </div>
+                                    <br>
+                                    <div class="field">
+
+                                      <%= f.input :ending_hour %>
+                                    </div>
+                                    <br>
+                                    <div class="field">
+
+                                      <%= f.input :city %>
+                                    </div>
+                                    <br>
+                                    <div class="field">
+
+                                      <%= f.input :zip_code %>
+                                    </div>
+                                    <br>
+                                    <div class="field">
+
+                                      <%= f.input :street %>
+                                    </div>
+                                    <br>
+                                    <div class="field">
+
+                                      <%= f.input :number %>
+                                    </div>
+                    <hr>
+                    <center>
+                      <div class="actions">
+                        <%= f.submit %>
+                      </div>
+                    </center>
+                </div>
+                <div class="modal-footer">
+                    <center>
+                    </center>
+                </div>
+            </div>
+        </div>
+</div>
+<% end %>
