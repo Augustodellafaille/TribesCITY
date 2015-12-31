@@ -2,29 +2,30 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class= "text-center" style="margin:30px;">
-          About <%=@user.username%>
-        </h1>
-        <center>
-        <p class= "text-center" style="margin:20px;">
-          <strong>
-        </p>
-        <h3><%=@user.firstname%> <%=@user.lastname%></h3><p>from <%=@user.city%></p>
+        <h1 class= "text-center" style="margin:30px;">About <%=@user.username %> from <%=@user.city%></h1>
+      </div>
+      <div class="modal-body text-center">
+        <h1> Your real name is:</h1>
+        <h2><%=@user.firstname%> <%=@user.lastname%></h2>
         <br>
-        <h4>We can contact you by:</h4>
-        <div class= "text-left">
-        <h3>email:</h3><p><%=@user.email%></p>
-        <h3>phone:</h3><p><%=@user.phone_number%></p>
-        </div>
-        <h4>You live at:</h4>
-        <p><%=@user.street%> n°<%=@user.number%>,</p>
-        <p><%=@user.zip_code%> <%=@user.city%></p>
+        <h1>you are <%=@user.age%> old</h1>
         <br>
         <br>
-        <%= link_to 'Edit', edit_user_path(current_user)%> |
-        <%= link_to 'Back', root_path %>
-
+        <h1>We can contact you by:</h1>
+        <h2>Email:</h2><h3><%= @user.email %></h3>
+        <h2>Phone:</h2><h3><%=@user.phone_number%></h3>
+        <br>
+        <br>
+        <h1>You might recieve party at</h1>
+        <h2>
+          <%=@user.street%> n° <%=@user.number%><br>
+          <%=@user.zip_code %>, <%=@user.city%>
+        </h2>
         </center>
+      </div>
+      <div class="modal-footer text-center">
+        <%= link_to 'Edit', edit_user_path(@user)%> |
+        <%= link_to 'Back', users_path %>
       </div>
     </div>
   </div>
