@@ -4,10 +4,11 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
   resources :parties
-
-  devise_for :users, :controllers => { registrations: 'registrations'}
   resources :users
+ devise_for :users, :controllers => {sessions: 'sessions', registrations: 'registrations'}
+  # resources :users
   get 'parties/:id', to: 'parties#show'
+  # get 'users/:id', to: 'users#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
