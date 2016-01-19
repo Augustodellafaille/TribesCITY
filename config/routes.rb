@@ -4,8 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
   resources :parties
-  resources :users
- devise_for :users, :controllers => {sessions: 'sessions', registrations: 'registrations'}
+  devise_for :users
   # resources :users
   get 'parties/:id', to: 'parties#show'
   # get 'users/:id', to: 'users#show'
